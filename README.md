@@ -1,5 +1,9 @@
 CX.Migrator
 畅想数据库版本管理类库
+类库目标
+1.目标是为数据表和列索引的增删改提供代码级完美支持
+2.方便插件和其他业务所需随时对数据库提供改动
+3.完美迁移数据库
 
 支持Sqlite/Mysql/MariaDb/Oracle/Sqlce/Mssql全系列/Postgresql
 
