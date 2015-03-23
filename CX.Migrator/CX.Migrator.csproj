@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B8C8C48F-DC2F-4BB6-AC25-73D779B72C49}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CX.Migrator</RootNamespace>
+    <AssemblyName>CX.Migrator</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\LibConsole\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\LibConsole\bin\Debug\CX.Migrator.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\CX.Web\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\CX.Web\bin\CX.Migrator.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configs\SqlCeTypeMap.cs" />
+    <Compile Include="Framework\BuildHelp.cs" />
+    <Compile Include="Framework\ColumnProperty.cs" />
+    <Compile Include="Configs\Sql2000TypeMap.cs" />
+    <Compile Include="Configs\MySqlTypeMap.cs" />
+    <Compile Include="Configs\OracleTypeMap.cs" />
+    <Compile Include="Configs\PostgreSqlTypeMap.cs" />
+    <Compile Include="Configs\SqliteTypeMap.cs" />
+    <Compile Include="Configs\TypeMapBase.cs" />
+    <Compile Include="Framework\Column.cs" />
+    <Compile Include="Framework\MigratorBase.cs" />
+    <Compile Include="Framework\Migrator_Version.cs" />
+    <Compile Include="Framework\MigrationBase.cs" />
+    <Compile Include="Framework\StringReplace.cs" />
+    <Compile Include="Helper\ConnectParser.cs" />
+    <Compile Include="Helper\CXConnection.cs" />
+    <Compile Include="Helper\SqlInfoHelper.cs" />
+    <Compile Include="Helper\TableInfo.cs" />
+    <Compile Include="Helper\VersionHolder.cs" />
+    <Compile Include="IMigrationUtil.cs" />
+    <Compile Include="IAssemblyWorker.cs" />
+    <Compile Include="MigrationUtil.cs" />
+    <Compile Include="Providers\OracleProvider.cs" />
+    <Compile Include="Providers\Sql2008Provider.cs" />
+    <Compile Include="Providers\Sql2005Provider.cs" />
+    <Compile Include="Providers\SqlCeProvider.cs" />
+    <Compile Include="Providers\Sql2000Provider.cs" />
+    <Compile Include="Providers\MariaDbProvider.cs" />
+    <Compile Include="Providers\PostgreSqlProvider.cs" />
+    <Compile Include="Providers\SqliteProvider.cs" />
+    <Compile Include="Providers\MysqlProvider.cs" />
+    <Compile Include="Providers\ProviderBase.cs" />
+    <Compile Include="AssemblyWorker.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SortedElement.cs" />
+    <Compile Include="SqlProvider.cs" />
+    <Compile Include="UtilityTools.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Apache-License-2.0.txt" />
+    <Content Include="Oracle尚未完成.txt" />
+    <Content Include="Oracle和MariaDb以及Sql2000尚未测试.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
