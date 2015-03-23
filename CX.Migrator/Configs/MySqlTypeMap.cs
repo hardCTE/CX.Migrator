@@ -1,4 +1,8 @@
-﻿using System;
+#region License
+//   龙之舞2015  欢迎大家多提意见 6483478@qq.com
+//   http://www.apache.org/licenses/LICENSE-2.0
+#endregion
+using System;
 using System.Data;
 using CX.Migrator.Framework;
 
